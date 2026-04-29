@@ -1,54 +1,16 @@
-# 🛡️ Make Insure (Full-Stack Super App)
+# React + Vite
 
-**Next-Generation Insurance Claim Verification & User Portal**
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Make Insure is a comprehensive, full-stack insurance application built to solve the dual-sided failure of modern insurance systems: catching fraudulent claims *before* payout while providing a seamless, personalized dashboard experience for legitimate users.
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🚀 The Vision
-Moving beyond a simple verification tool, Make Insure offers a complete user ecosystem. It integrates a real-time AI-driven fraud gatekeeper with a modern user dashboard, curated policy offers, and persistent claim tracking, proving that enterprise-grade security can coexist with beautiful UI/UX.
+## React Compiler
 
-## ✨ Key Features
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-* **Real-Time AI Auditor:** The core engine. It intercepts claims at submission, applying dynamic financial ratio checks to instantly triage claims into Auto-Approved, Manual Review, or Total Fraud.
-* **Dynamic Dashboard:** A central hub that reads from persistent browser storage to display real-time statistics on total claims audited, fraud prevented, and pending reviews.
-* **Interactive Policy Offers:** An animated, responsive marketplace featuring curated insurance packages across Health, Vehicle, Tech, and Travel domains.
-* **Profile & Settings Vault:** A state-driven user profile page featuring interactive, expandable panels for Security Settings, UPI Payment Management, and an Insurance Document Vault.
-* **Persistent Audit Ledger:** A live history table that securely logs all AI decisions, timestamps, and risk scores using `localStorage` so data survives page refreshes.
+## Expanding the ESLint configuration
 
----
-
-## 🛠️ Tech Stack & Architecture
-
-### Frontend (The User Portal)
-* **React.js** (Bootstrapped with Vite)
-* **React Router DOM** (Client-side routing for seamless, non-reloading page transitions)
-* **Axios** (Asynchronous API communication)
-* **State Management:** React `useState` & `useEffect` hooks coupled with HTML5 LocalStorage.
-
-### Backend (The AI Engine)
-* **Node.js & Express.js** (RESTful API architecture)
-* **Multer** (Middleware for handling secure multipart/form-data image uploads)
-* **CORS** (Cross-Origin Resource Sharing)
-
----
-
-## 📁 Project Structure
-
-```text
-Make Insure App/
-├── backend/
-│   ├── uploads/            # Temporary visual evidence storage
-│   ├── package.json
-│   └── server.js           # Core AI logic & API endpoint
-└── frontend/
-    ├── src/
-    │   ├── views/
-    │   │   ├── Auditor/    # Form & AI Results UI
-    │   │   ├── Dashboard/  # Dynamic stats & welcome screen
-    │   │   ├── Offers/     # Expandable interactive policy cards
-    │   │   └── Profile/    # Inline settings & vault UI
-    │   ├── App.jsx         # Main Router & Navigation Switchboard
-    │   └── main.jsx
-    └── package.json
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
